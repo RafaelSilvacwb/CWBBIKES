@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CWB BIKE - Grupo de Ciclismo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-bicycle"></i>
+                <span>CWB BIKE</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#beneficios">Benefícios</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Junte-se à <span class="highlight">comunidade</span> CWB BIKE</h1>
+                <p>Pedaladas incríveis, amizades duradouras e aventuras sobre duas rodas</p>
+                <div class="hero-buttons">
+                    <a href="login.html" class="btn-primary">Fazer Login</a>
+                    <a href="#eventos" class="btn-secondary">Próximos Eventos</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-slide active">
+                            <img src="images/4k-mountain-bike-in-sunset-i4zh0l2vij5ptmrk.jpg" alt="Mountain Bike Sunset">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/00375901.jpg" alt="Cycling Adventure">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/Passeio, Silhueta, Ciclismo Imagens de fundo gratuitas, Bicicleta Ciclista Bicicleta Ciclo Background Foto PNG e vetores de fundo.jpg" alt="Bike Silhouette">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/4k-mountain-bike-in-sunset-i4zh0l2vij5ptmrk.jpg" alt="Mountain Bike Sunset 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/00375901.jpg" alt="Cycling Adventure 2">
+                        </div>
+                    </div>
+                    <!-- Removed the left arrow button as per request -->
+                    <!-- <button class="carousel-btn prev" onclick="moveSlide(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button> -->
+                    <!-- Removed the right arrow button as per request -->
+                    <!-- <button class="carousel-btn next" onclick="moveSlide(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button> -->
+                    <div class="carousel-indicators">
+                        <span class="indicator active" onclick="goToSlide(0)"></span>
+                        <span class="indicator" onclick="goToSlide(1)"></span>
+                        <span class="indicator" onclick="goToSlide(2)"></span>
+                        <span class="indicator" onclick="goToSlide(3)"></span>
+                        <span class="indicator" onclick="goToSlide(4)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-background">
+            <div class="bicycle-animation">
+                <i class="fas fa-bicycle"></i>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- About Section -->
+    <section id="sobre" class="section about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre o CWB BIKE</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>O CWB BIKE nasceu em Curitiba da paixão compartilhada pelo ciclismo and da vontade de criar uma comunidade acolhedora para ciclistas de todos os níveis. Desde 2018, temos unido pessoas através do amor pelas pedaladas pela capital paranaense.</p>
+                    <p>Nossa missão é promover o ciclismo como estilo de vida na cidade modelo, incentivando a prática saudável, a mobilidade urbana sustentável e a construção de amizades duradouras.</p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="500">500</span>
+                            <span class="stat-label">Membros</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="120">120</span>
+                            <span class="stat-label">Eventos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="3500">3500</span>
+                            <span class="stat-label">Km Pedalados</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="cycling-values">
+                        <div class="value-card">
+                            <i class="fas fa-heart"></i>
+                            <h4>Paixão</h4>
+                            <p>Amor pelo ciclismo em cada pedalada</p>
+                        </div>
+                        <div class="value-card">
+                            <i class="fas fa-users"></i>
+                            <h4>Comunidade</h4>
+                            <p>Juntos somos mais fortes</p>
+                        </div>
+                        <div class="value-card">
+                            <i class="fas fa-leaf"></i>
+                            <h4>Sustentabilidade</h4>
+                            <p>Mobilidade verde e consciente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="eventos" class="section events">
+        <div class="container">
+            <div class="section-title">
+                <h2>Próximos Eventos</h2>
+                <p>Junte-se a nós nas próximas aventuras</p>
+            </div>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="date-day">15</span>
+                        <span class="date-month">DEZ</span>
+                    </div>
+                    <div class="event-content">
+                    <h3>Pedal Noturno pela Rua 24 Horas</h3>
+                    <p>Uma experiência única pelas ruas históricas do centro de Curitiba com bikes iluminadas</p>
+                    <div class="event-details">
+                        <span><i class="fas fa-clock"></i> 19:30</span>
+                        <span><i class="fas fa-road"></i> 20km</span>
+                        <span><i class="fas fa-signal"></i> Fácil</span>
+                    </div>
+                        <a href="#contato" class="btn-primary">Inscrever-se</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="date-day">22</span>
+                        <span class="date-month">DEZ</span>
+                    </div>
+                    <div class="event-content">
+                    <h3>Desafio da Serra do Mar</h3>
+                    <p>Para os amantes de subidas com vistas espetaculares da Serra do Mar paranaense</p>
+                    <div class="event-details">
+                        <span><i class="fas fa-clock"></i> 07:00</span>
+                        <span><i class="fas fa-road"></i> 55km</span>
+                        <span><i class="fas fa-signal"></i> Difícil</span>
+                    </div>
+                        <a href="#contato" class="btn-primary">Inscrever-se</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="date-day">05</span>
+                        <span class="date-month">JAN</span>
+                    </div>
+                    <div class="event-content">
+                    <h3>Pedal no Parque Tingui</h3>
+                    <p>Domingo em família pelo belo Parque Tingui com atividades para todos os níveis</p>
+                    <div class="event-details">
+                        <span><i class="fas fa-clock"></i> 09:00</span>
+                        <span><i class="fas fa-road"></i> 18km</span>
+                        <span><i class="fas fa-signal"></i> Iniciante</span>
+                    </div>
+                        <a href="#contato" class="btn-primary">Inscrever-se</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="date-day">20</span>
+                        <span class="date-month">JAN</span>
+                    </div>
+                    <div class="event-content">
+                    <h3>Pedal pela Ciclovia do Rio Iguaçu</h3>
+                    <p>Explore a ciclovia ao longo do Rio Iguaçu com vistas deslumbrantes e ar puro</p>
+                    <div class="event-details">
+                        <span><i class="fas fa-clock"></i> 08:00</span>
+                        <span><i class="fas fa-road"></i> 25km</span>
+                        <span><i class="fas fa-signal"></i> Intermediário</span>
+                    </div>
+                        <a href="#contato" class="btn-primary">Inscrever-se</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="date-day">10</span>
+                        <span class="date-month">FEV</span>
+                    </div>
+                    <div class="event-content">
+                    <h3>Passeio de Bike pelo Jardim Botânico</h3>
+                    <p>Um passeio relaxante pelo Jardim Botânico de Curitiba, admirando a flora local</p>
+                    <div class="event-details">
+                        <span><i class="fas fa-clock"></i> 10:00</span>
+                        <span><i class="fas fa-road"></i> 15km</span>
+                        <span><i class="fas fa-signal"></i> Fácil</span>
+                    </div>
+                        <a href="#contato" class="btn-primary">Inscrever-se</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="date-day">25</span>
+                        <span class="date-month">FEV</span>
+                    </div>
+                    <div class="event-content">
+                    <h3>Treino de Resistência no Parque Tanguá</h3>
+                    <p>Treino intenso de resistência com subidas desafiadoras no Parque Tanguá</p>
+                    <div class="event-details">
+                        <span><i class="fas fa-clock"></i> 07:00</span>
+                        <span><i class="fas fa-road"></i> 30km</span>
+                        <span><i class="fas fa-signal"></i> Avançado</span>
+                    </div>
+                        <a href="#contato" class="btn-primary">Inscrever-se</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="beneficios" class="section benefits">
+        <div class="container">
+            <div class="section-title">
+                <h2>Benefícios de Participar</h2>
+                <p>Por que fazer parte do CWB BIKE?</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Saúde & Bem-estar</h3>
+                    <p>Exercício físico regular, ar puro e redução do estresse</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-friends"></i>
+                    </div>
+                    <h3>Amizades</h3>
+                    <p>Conheça pessoas incríveis com a mesma paixão</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Desafios Pessoais</h3>
+                    <p>Supere seus limites e comemore cada conquista</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-scenery"></i>
+                    </div>
+                    <h3>Paisagens Incríveis</h3>
+                    <p>Descubra lugares novos de uma perspectiva única</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Suporte Técnico</h3>
+                    <p>Ajuda with manutenção e dicas de equipamentos</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Fotos Profissionais</h3>
+                    <p>Registro dos melhores momentos dos pedais</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="background: var(--primary-color); color: var(--white);">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-bicycle"></i>
+                <span>CWB BIKE</span>
+            </div>
+            <p>Conectando ciclistas de Curitiba e região</p>
+            <div class="footer-links">
+                <a href="#home" style="color: var(--white);">Início</a>
+                <a href="#sobre" style="color: var(--white);">Sobre</a>
+                <a href="#eventos" style="color: var(--white);">Eventos</a>
+                <a href="#beneficios" style="color: var(--white);">Benefícios</a>
+                <a href="galeria.html" style="color: var(--white);">Galeria</a>
+                <a href="#contato" style="color: var(--white);">Contato</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://facebook.com/cwbbike" target="_blank" style="color: var(--white);"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/cwbbike" target="_blank" style="color: var(--white);"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/cwbbike" target="_blank" style="color: var(--white);"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="footer-copyright" style="color: var(--white);">&copy; 2023 CWB BIKE. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

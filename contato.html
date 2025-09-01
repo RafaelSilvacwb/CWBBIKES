@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - CWB BIKE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-bicycle"></i>
+                <span>CWB BIKE</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Início</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#eventos">Eventos</a></li>
+                <li><a href="index.html#beneficios">Benefícios</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section id="contato" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Entre em Contato</h2>
+                <p>Conecte-se conosco e faça parte da comunidade de ciclistas de Curitiba</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Localização</h3>
+                            <p>Curitiba, Paraná, Brasil</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>contato@cwbbike.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Telefone</h3>
+                            <p>(41) 99999-9999</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="background: var(--primary-color); color: var(--white);">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-bicycle"></i>
+                <span>CWB BIKE</span>
+            </div>
+            <p>Conectando ciclistas de Curitiba e região</p>
+            <div class="footer-links">
+                <a href="index.html#home" style="color: var(--white);">Início</a>
+                <a href="index.html#sobre" style="color: var(--white);">Sobre</a>
+                <a href="index.html#eventos" style="color: var(--white);">Eventos</a>
+                <a href="index.html#beneficios" style="color: var(--white);">Benefícios</a>
+                <a href="galeria.html" style="color: var(--white);">Galeria</a>
+                <a href="#contato" style="color: var(--white);">Contato</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://facebook.com/cwbbike" target="_blank" style="color: var(--white);"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/cwbbike" target="_blank" style="color: var(--white);"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/cwbbike" target="_blank" style="color: var(--white);"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="footer-copyright" style="color: var(--white);">&copy; 2023 CWB BIKE. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

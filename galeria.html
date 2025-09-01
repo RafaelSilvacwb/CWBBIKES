@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - CWB BIKE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            padding: 2rem 0;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+        .lightbox .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-bicycle"></i>
+                <span>CWB BIKE</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Início</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#eventos">Eventos</a></li>
+                <li><a href="index.html#beneficios">Benefícios</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Galeria de Pedais</h2>
+                <p>Momentos incríveis capturados durante nossas aventuras sobre duas rodas</p>
+            </div>
+            <div class="gallery-grid">
+                <img src="./images/4k-mountain-bike-in-sunset-i4zh0l2vij5ptmrk.jpg" alt="Mountain Bike Sunset">
+                <img src="./images/00375901.jpg" alt="Cycling Adventure">
+                <img src="./images/Passeio, Silhueta, Ciclismo Imagens de fundo gratuitas, Bicicleta Ciclista Bicicleta Ciclo Background Foto PNG e vetores de fundo.jpg" alt="Bike Silhouette">
+                <img src="./images/download.jpg" alt="Cycling Scene">
+                <img src="./images/download (1).jpg" alt="Bike Ride">
+                <img src="./images/download (2).jpg" alt="Mountain Trail">
+                <img src="./images/download (3).jpg" alt="Urban Cycling">
+                <img src="./images/images.jpg" alt="Bike Gallery">
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="close" id="close">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" style="background: var(--primary-color); color: var(--white);">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-bicycle"></i>
+                <span>CWB BIKE</span>
+            </div>
+            <p>Conectando ciclistas de Curitiba e região</p>
+            <div class="footer-links">
+                <a href="index.html#home" style="color: var(--white);">Início</a>
+                <a href="index.html#sobre" style="color: var(--white);">Sobre</a>
+                <a href="index.html#eventos" style="color: var(--white);">Eventos</a>
+                <a href="index.html#beneficios" style="color: var(--white);">Benefícios</a>
+                <a href="#galeria" style="color: var(--white);">Galeria</a>
+                <a href="index.html#contato" style="color: var(--white);">Contato</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://facebook.com/cwbbike" target="_blank" style="color: var(--white);"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/cwbbike" target="_blank" style="color: var(--white);"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/cwbbike" target="_blank" style="color: var(--white);"><i class="fab fa-twitter"></i></a>
+            </div>
+    <p class="footer-copyright" style="color: var(--white);">&copy; 2023 CWB BIKE. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const galleryImages = document.querySelectorAll('.gallery-grid img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.getElementById('close');
+
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
