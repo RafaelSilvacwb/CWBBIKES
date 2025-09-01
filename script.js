@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (hamburger && navMenu) {
         hamburger.addEventListener('click', function() {
             navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
         });
     }
 });
